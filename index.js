@@ -1,7 +1,7 @@
 window.onload = () => {
   const message = document.querySelector("#message")
   const countdown = document.querySelector("#countdown")
-  const deadline = dayjs('2022-08-07 16:30:00')
+  const deadline = dayjs('2023-08-05 20:30:00')
   
   const timer = () => {
     let diff = deadline.diff();
