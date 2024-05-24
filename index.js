@@ -1,11 +1,11 @@
 window.onload = () => {
   const message = document.querySelector("#message")
   const countdown = document.querySelector("#countdown")
-  const deadline = dayjs('2024-02-18 16:30:00')
-  
+  const deadline = dayjs('2024-08-25 16:30:00')
+
   const timer = () => {
     let diff = deadline.diff();
-    if(diff > 0){
+    if (diff > 0) {
       const day = Math.floor(diff / 86400000);
       diff -= 86400000 * day;
       const hour = Math.floor(diff / 3600000);
@@ -19,11 +19,11 @@ window.onload = () => {
       message.innerText = "作品提出期間は終了しました！"
       countdown.innerText = "お疲れさまでした！"
     }
-    setTimeout(timer,100)
+    setTimeout(timer, 100)
   }
   timer()
 }
 
 function zeroPad(n) {
-  return ( '00' + n ).slice(-2)
+  return ('00' + n).slice(-2)
 }
